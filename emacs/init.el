@@ -27,8 +27,12 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
+(whitespace-mode 1)
 
-(add-to-list 'load-path "~/.config/emacs/local-stuff/simpc-mode/")
+(add-to-list 'load-path "~/.config/emacs/modes/simpc-mode/")
 (require 'simpc-mode)
 (add-to-list 'auto-mode-alist '("\\.[hc]\\(pp\\)?\\'" . simpc-mode))
+(setq-default indent-tabs-mode nil)
 
+(load-theme 'deserted)
+(put 'dired-find-alternate-file 'disabled nil)
