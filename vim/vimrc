@@ -9,7 +9,7 @@ set number
 set relativenumber
  set cursorline
 set nowrap
-set scrolloff=10
+set scrolloff=5
 set sidescrolloff=8
 
 set tabstop=4
@@ -28,6 +28,7 @@ nmap [b :bprevious<CR>
 nmap ]b :bnext<CR>
 nmap [B :bad 
 
+set viminfo+=n~/.vim/viminfo
 runtime ftplugin/man.vim
 filetype plugin on
 
