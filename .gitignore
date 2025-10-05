@@ -2,3 +2,8 @@ emacs/auto-save-list
 emacs/eln-cache
 emacs/elpa
 emacs/.mc-lists.el
+emacs/transient
+vim/viminfo
+vim/nviminfo
+vim/pack
+vim/.netrwhist
