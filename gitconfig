@@ -1,0 +1,7 @@
+[user]
+	email = emilioizaguirre@uchicago.edu
+	name = emilioizaguirre
+[init]
+	defaultBranch = main
+[core]
+	editor = vim
