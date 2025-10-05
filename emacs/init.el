@@ -41,7 +41,7 @@
 ;;(whitespace-mode 1)
 ;;(setq whitespace-style '(trailing tabs indentation::tab tab-mark))
 (setq inhibit-splash-screen 1)
-(setq backup-directory-alist '(("." . "~/.saves")))
+(setq backup-directory-alist '(("." . "~/.config/emacs/saves")))
 (setq display-line-numbers-type 'relative)
 (setq visible-bell t)
 (setq completion-auto-help 'nil)
