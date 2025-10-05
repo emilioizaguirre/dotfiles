@@ -24,6 +24,7 @@ set laststatus=2
 set incsearch
 set hlsearch
 set autowrite
+set wildmode=list,full
 
 tmap <ESC> <C-\><C-n>
 nmap ; :
