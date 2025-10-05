@@ -13,10 +13,16 @@ set background=dark
 hi clear
 let g:colors_name = 'deserted'
 
-let s:t_Co = has('gui_running') ? -1 : (&t_Co ?? 0)
+let s:t_Co = has('gui_running') ? -1 : (&t_Co ? &t_Co : 0)
 
 if (has('termguicolors') && &termguicolors) || has('gui_running')
   let g:terminal_ansi_colors = ['#7f7f8c', '#cd5c5c', '#9acd32', '#bdb76b', '#75a0ff', '#eeee00', '#cd853f', '#666666', '#8a7f7f', '#ff0000', '#89fb98', '#f0e68c', '#6dceeb', '#ffde9b', '#ffa0a0', '#c2bfa5']
+  if has('nvim')
+    " Nvim uses g:terminal_color_{0-15} instead
+    for i in range(g:terminal_ansi_colors->len())
+      let g:terminal_color_{i} = g:terminal_ansi_colors[i]
+    endfor
+  endif
 endif
 hi! link Terminal Normal
 hi! link LineNrAbove LineNr
@@ -116,7 +122,8 @@ if s:t_Co >= 256
   hi TabLineSel ctermfg=236 ctermbg=186 cterm=NONE
   hi ToolbarLine ctermfg=NONE ctermbg=241 cterm=NONE
   hi ToolbarButton ctermfg=236 ctermbg=222 cterm=bold
-  hi NonText ctermfg=81 ctermbg=239 cterm=NONE
+"  hi NonText ctermfg=81 ctermbg=239 cterm=NONE
+  hi NonText ctermfg=81 ctermbg=NONE cterm=NONE
   hi SpecialKey ctermfg=174 ctermbg=NONE cterm=NONE
   hi Folded ctermfg=114 ctermbg=237 cterm=NONE
   hi Visual ctermfg=186 ctermbg=64 cterm=NONE
