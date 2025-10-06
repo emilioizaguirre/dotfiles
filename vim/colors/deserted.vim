@@ -148,7 +148,8 @@ if s:t_Co >= 256
   hi MatchParen ctermfg=242 ctermbg=143 cterm=NONE
   hi Search ctermfg=186 ctermbg=242 cterm=NONE
   hi IncSearch ctermfg=186 ctermbg=172 cterm=NONE
-  hi WildMenu ctermfg=236 ctermbg=226 cterm=NONE
+"  hi WildMenu ctermfg=236 ctermbg=226 cterm=NONE
+  hi WildMenu ctermfg=236 ctermbg=228 cterm=NONE
   hi ColorColumn ctermfg=231 ctermbg=167 cterm=NONE
   hi debugPC ctermfg=241 ctermbg=NONE cterm=reverse
   hi debugBreakpoint ctermfg=217 ctermbg=NONE cterm=reverse
