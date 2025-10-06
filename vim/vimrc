@@ -24,11 +24,19 @@ set laststatus=2
 set incsearch
 set hlsearch
 set autowrite
-set wildmode=list,full
+set wildmenu
+set wildmode=longest:full,full
+set wildoptions=
+
+packadd! matchit
 
 tmap <ESC> <C-\><C-n>
 nmap ; :
 vmap ; :
+nmap [q :cprevious<CR>
+nmap ]q :cnext<CR>
+nmap [b :bprevious<CR>
+nmap ]b :bnext<CR>
 
 runtime ftplugin/man.vim
 filetype plugin on
@@ -40,9 +48,5 @@ endif
 if has('nvim')
     set viminfo+=n~/.vim/nviminfo
 else
-    nmap [q :cprevious<CR>
-    nmap ]q :cnext<CR>
-    nmap [b :bprevious<CR>
-    nmap ]b :bnext<CR>
     set viminfo+=n~/.vim/viminfo
 endif
