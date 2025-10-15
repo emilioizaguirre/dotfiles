@@ -12,6 +12,8 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 
+vim.opt.guicursor = ''
+
 vim.opt.listchars = 'trail:*,leadmultispace:·   ,tab:· ·'
 vim.opt.list = true
 
@@ -20,26 +22,21 @@ vim.opt.wildmenu = true
 vim.opt.wildmode = 'longest:full,full'
 vim.opt.wildoptions = ''
 
+vim.g.python3_host_prog = '/home/emilio/utils/venvs/pynvim/bin/python'
+vim.g.loaded_node_provider = 0;
+vim.g.loaded_perl_provider = 0;
+vim.g.loaded_ruby_provider = 0;
+
+vim.g.c_syntax_for_h = 1
+
 vim.keymap.set('t', '<ESC>', '<C-\\><C-n>')
 vim.keymap.set('v', ';', ':')
 vim.keymap.set('n', ';', ':')
-vim.keymap.set('n', '<C-J>', '<C-F>')
-vim.keymap.set('n', '<C-K>', '<C-B>')
-vim.keymap.set('n', '[q', '<Cmd>cprevious<CR>')
-vim.keymap.set('n', ']q', '<Cmd>cnext<CR>')
-vim.keymap.set('n', '[b', '<Cmd>bprevious<CR>')
-vim.keymap.set('n', ']b', '<Cmd>bnext<CR>')
+vim.keymap.set('n', '<C-J>', '<C-D>')
+vim.keymap.set('n', '<C-K>', '<C-U>')
 
---[[
-if filereadable("./Session.vim")
-    source Session.vim
-endif
---]]
+if vim.fn.filereadable('Session.vim') == 1 then
+    vim.cmd.source('Session.vim')
+end
 
---[[
-if has('nvim')
-    set viminfo+=n~/.vim/nviminfo
-else
-    set viminfo+=n~/.vim/viminfo
-endif
-]]
+vim.keymap.set('n', '<C-S>s', function() vim.treesitter.stop(vim.api.nvim_win_get_buf(0)) end)
