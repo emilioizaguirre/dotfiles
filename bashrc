@@ -108,7 +108,7 @@ fi
 
 alias bashscript='echo \#\!/usr/bin/env bash'
 
-alias vim='nvim'
+alias vi='vi --clean'
 alias vimrc='nvim $HOME/.config/nvim/'
 
 # enable programmable completion features (you don't need to enable
