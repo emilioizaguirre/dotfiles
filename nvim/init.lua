@@ -22,6 +22,9 @@ vim.opt.wildmenu = true
 vim.opt.wildmode = 'longest:full,full'
 vim.opt.wildoptions = ''
 
+vim.opt.grepprg = 'internal'
+vim.opt.exrc = true
+
 vim.g.python3_host_prog = '/home/emilio/utils/venvs/pynvim/bin/python'
 vim.g.loaded_node_provider = 0;
 vim.g.loaded_perl_provider = 0;
@@ -30,13 +33,11 @@ vim.g.loaded_ruby_provider = 0;
 vim.g.c_syntax_for_h = 1
 
 vim.keymap.set('t', '<ESC>', '<C-\\><C-n>')
-vim.keymap.set('v', ';', ':')
 vim.keymap.set('n', ';', ':')
+vim.keymap.set('n', ':', ';')
+vim.keymap.set('v', ';', ':')
+vim.keymap.set('v', ':', ';')
 vim.keymap.set('n', '<C-J>', '<C-D>')
 vim.keymap.set('n', '<C-K>', '<C-U>')
-
-if vim.fn.filereadable('Session.vim') == 1 then
-    vim.cmd.source('Session.vim')
-end
 
 vim.keymap.set('n', '<C-S>s', function() vim.treesitter.stop(vim.api.nvim_win_get_buf(0)) end)
