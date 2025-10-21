@@ -143,7 +143,7 @@ if s:t_Co >= 256
   hi FoldColumn ctermfg=114 ctermbg=239 cterm=NONE
   hi CursorLine ctermfg=NONE ctermbg=238 cterm=NONE
   hi CursorColumn ctermfg=NONE ctermbg=241 cterm=NONE
-  hi CursorLineNr ctermfg=13 ctermbg=NONE cterm=bold
+  hi CursorLineNr ctermfg=128 ctermbg=NONE cterm=bold
   hi QuickFixLine ctermfg=236 ctermbg=186 cterm=NONE
   hi SignColumn ctermfg=NONE ctermbg=NONE cterm=NONE
   hi Underlined ctermfg=111 ctermbg=NONE cterm=underline
