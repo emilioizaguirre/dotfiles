@@ -34,13 +34,18 @@ hi! link MessageWindow Pmenu
 hi! link PopupNotification Todo
 hi! link PopupSelected PmenuSel
 """""""""
-hi! link @type.builtin Type
-hi! link @function Special
-hi! link @property Special
-hi @variable guifg=#ffffff guibg=NONE gui=NONE cterm=NONE
-hi @punctuation guifg=#ffffff guibg=NONE gui=NONE cterm=NONE
+"hi! link vimHiGroup vimHLGroup
+"hi! link @type.builtin Type
+"hi! link @function Special
+"hi! link @property Special
+"hi! link @constant.builtin Identifier
+"hi! link @keyword.doxygen Special
+"hi! link @variable.builtin Identifier
+"hi @variable guifg=#ffffff guibg=NONE gui=NONE cterm=NONE
+"hi @punctuation guifg=#ffffff guibg=NONE gui=NONE cterm=NONE
 """""""""
-hi Normal guifg=#ffffff guibg=#3a3a3a gui=NONE cterm=NONE
+"hi Normal guifg=#ffffff guibg=#3a3a3a gui=NONE cterm=NONE
+hi Normal guifg=#ffffff guibg=#303030 gui=NONE cterm=NONE
 hi StatusLine guifg=#333333 guibg=#afaf87 gui=NONE cterm=NONE
 hi StatusLineNC guifg=#7f7f8c guibg=#afaf87 gui=NONE cterm=NONE
 hi StatusLineTerm guifg=#333333 guibg=#afaf87 gui=NONE cterm=NONE
@@ -59,12 +64,12 @@ hi ToolbarLine guifg=NONE guibg=#666666 gui=NONE cterm=NONE
 hi ToolbarButton guifg=#333333 guibg=#ffde9b gui=bold cterm=bold
 hi NonText guifg=#5fd7ff guibg=NONE gui=NONE cterm=NONE
 hi SpecialKey guifg=#9acd32 guibg=NONE gui=NONE cterm=NONE
-hi Folded guifg=#eeee00 guibg=#4d4d4d gui=NONE cterm=NONE
+hi Folded guifg=#ffff87 guibg=#404040 gui=bold cterm=NONE
 hi Visual guifg=#f0e68c guibg=#6b8e24 gui=NONE cterm=NONE
 hi VisualNOS guifg=#f0e68c guibg=#6dceeb gui=NONE cterm=NONE
 hi LineNr guifg=#c6c6c6 guibg=NONE gui=NONE cterm=NONE
-hi FoldColumn guifg=#eeee00 guibg=#4d4d4d gui=NONE cterm=NONE
-hi CursorLine guifg=NONE guibg=gray29 gui=NONE cterm=NONE
+hi FoldColumn guifg=#ffff87 guibg=#404040 gui=bold cterm=NONE
+hi CursorLine guifg=NONE guibg=#404040 gui=NONE cterm=NONE
 hi CursorColumn guifg=NONE guibg=#666666 gui=NONE cterm=NONE
 hi CursorLineNr guifg=DarkViolet guibg=NONE gui=bold cterm=NONE
 hi QuickFixLine guifg=#333333 guibg=#f0e68c gui=NONE cterm=NONE
@@ -97,7 +102,7 @@ hi Constant guifg=#ffa0a0 guibg=NONE gui=NONE cterm=NONE
 hi PreProc guifg=#cd5c5c guibg=NONE gui=NONE cterm=NONE
 hi Type guifg=#ffff87 guibg=NONE gui=bold cterm=bold
 hi Special guifg=#ffde9b guibg=NONE gui=NONE cterm=NONE
-hi Directory guifg=#6dceeb guibg=NONE gui=NONE cterm=NONE
+hi Directory guifg=#89fb98 guibg=NONE gui=NONE cterm=NONE
 hi Conceal guifg=#666666 guibg=NONE gui=NONE cterm=NONE
 hi Ignore guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
 hi Title guifg=#cd5c5c guibg=NONE gui=bold cterm=bold
