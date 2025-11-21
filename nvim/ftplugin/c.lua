@@ -1,1 +1,1 @@
-vim.treesitter.start()
+vim.o.syntax = 'c.doxygen'
