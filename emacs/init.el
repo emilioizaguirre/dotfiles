@@ -48,9 +48,9 @@
 (setq-default truncate-lines t)
 
 ;; cosmetic stuff
-(setq custom-theme-directory "~/.config/emacs/themes")
-(setq custom-safe-themes '("9e3deb98981367ca3f70fd465a7746a6928dca72357c4b9283abcc7fcacc570a" default))
-(load-theme 'deserted)
-(put 'dired-find-alternate-file 'disabled nil)
-(set-face-attribute 'default nil :family "Ubuntu Sans Mono" :height 200)
+; (setq custom-theme-directory "~/.config/emacs/themes")
+; (setq custom-safe-themes '("9e3deb98981367ca3f70fd465a7746a6928dca72357c4b9283abcc7fcacc570a" default))
+; (load-theme 'deserted)
+; (put 'dired-find-alternate-file 'disabled nil)
+ (set-face-attribute 'default nil :family "IBM Plex Mono" :height 180)
 
